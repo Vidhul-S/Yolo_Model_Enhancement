@@ -17,7 +17,7 @@ This project aims to enhance the performance of the YOLOv11 object detection mod
 
 ### Prerequisites
 
-- Python 3.8 or later
+- Python 3.8 
 - CUDA-compatible GPU (recommended)
 - Installed dependencies (e.g., `ultralytics`, `torch`, `scikit-learn`)
 
@@ -53,19 +53,6 @@ This project aims to enhance the performance of the YOLOv11 object detection mod
    svr = SVR(kernel='rbf')
    svr.fit(X_train, y_train)  # X_train: image properties, y_train: model scores
    ```
-
-### Image Modification
-
-- Apply transformations such as saturation, hue, brightness, and contrast using libraries like OpenCV or PIL:
-
-   ```python
-   from PIL import Image, ImageEnhance
-
-   image = Image.open("image.jpg")
-   enhancer = ImageEnhance.Brightness(image)
-   enhanced_image = enhancer.enhance(1.5)  # Increase brightness by 50%
-   ```
-
 ### Evaluation
 
 1. Test the enhanced images with YOLOv11 and observe improved confidence and IoU scores.
